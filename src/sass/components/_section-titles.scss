@@ -1,8 +1,0 @@
-/**
- * Common properties for all section headers 
- */
-.section__title {
-  margin: 0 200px;
-  @extend %section-title;
-  @extend %double-shadow-big;
-}

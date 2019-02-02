@@ -33,14 +33,4 @@
 @import './base/typography';
 @import './base/base';
 
-// Layout (partials)
-@import './layout/containers';
-@import './layout/page-header';
-@import './layout/section';
-@import './layout/footer.scss';
-
 // Components (modules)
-@import './components/site-logo';
-@import './components/buttons';
-@import './components/section-titles';
-@import './components/application-form';
