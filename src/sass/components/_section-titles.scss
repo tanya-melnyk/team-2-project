@@ -1,0 +1,6 @@
+/**
+ * Common properties for all section headers 
+ */
+.section__title {
+  @extend %section-title;
+}
