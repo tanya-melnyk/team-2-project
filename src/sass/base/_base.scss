@@ -23,3 +23,21 @@ body {
   max-width: 100%;
   height: auto;
 }
+
+.container {
+  width: $small-container;
+  padding-left: $large-padding;
+  padding-right: $large-padding;
+
+  @media (min-width: $medium-screen-width) {
+    width: $medium-container;
+    padding-left: $small-padding;
+    padding-right: $small-padding;
+  }
+
+  @media (min-width: $large-screen-width) {
+    width: $large-container;
+    padding-left: $medium-padding + 162px;
+    padding-right: $medium-padding;
+  }
+}
