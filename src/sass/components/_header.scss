@@ -1,0 +1,228 @@
+// *** HEADER ***
+.page-header {
+  background-color: $main-bg-color;
+}
+
+.page-header__wrapper {
+  padding-top: $medium-padding;
+  padding-bottom: 16px;
+
+  @media (min-width: $medium-screen-width) {
+    padding: 34px 74px 22px;
+  }
+
+  @media (min-width: $large-screen-width) {
+    padding-top: 31px;
+    padding-right: 133px;
+  }
+}
+
+// *** LOGO ***
+.logo__link {
+  @extend %link;
+  padding: 6px 0;
+}
+
+.page-header__inner {
+  @media (min-width: $large-screen-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+// *** INFO BLOCK ***
+.header__info-block {
+  padding: 14px 0;
+
+  @media (min-width: $medium-screen-width) {
+    padding: 20px 0;
+  }
+}
+
+.header__subject {
+  @include font-settings(0.875rem, 1.286);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  letter-spacing: 0.03em;
+  color: $primary-light-text;
+
+  &--med {
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+  }
+
+  @media (min-width: $medium-screen-width) {
+    margin-bottom: 2rem;
+    padding-right: 4rem;
+
+    &--med {
+      @include font-settings(1.125rem, 1.44);
+      margin-bottom: 1.75rem;
+      padding-right: 0;
+    }
+  }
+}
+
+.header__lead {
+  @include font-settings(1.25rem, 1.3);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+
+  &--blue {
+    color: $secondary-accent-color;
+  }
+
+  &--yellow {
+    margin-bottom: 0;
+    color: $yellow-accent-color;
+  }
+
+  @media (min-width: $medium-screen-width) {
+    @include font-settings(2.5rem, 1.25);
+  }
+}
+
+.header__meeting {
+  margin: 0;
+  margin-bottom: 0.1rem;
+  font-weight: bold;
+  color: $yellow-accent-color;
+
+  @media (min-width: $medium-screen-width) {
+    @include font-settings(1.125rem, 1);
+  }
+}
+
+// *** APPLICATION FORM SECTION ***
+.application-section {
+  padding: 14px 20px 26px;
+  background-color: $white;
+  box-shadow: 0px 12px 70px 0px rgba(121, 139, 188, 0.48);
+
+  @media (min-width: $medium-screen-width) {
+    padding: 26px 76px 40px;
+  }
+}
+
+// *** Application form header ***
+
+.application-section__header {
+  margin-bottom: 0.8rem;
+  color: $black;
+
+  @media (min-width: $medium-screen-width) {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+}
+
+.application-section__subject {
+  @include font-settings(1rem, 1.25);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+
+  @media (min-width: $medium-screen-width) {
+    @include font-settings(1.5rem, 1.17);
+    margin-bottom: 1.2rem;
+    padding: 0 3.2rem;
+  }
+}
+
+.application-section__desc {
+  @include font-settings(0.813rem, 1.385);
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+
+  @media (min-width: $medium-screen-width) {
+    letter-spacing: 0.07em;
+  }
+}
+
+.new-line {
+  display: block;
+
+  @media (min-width: $medium-screen-width) {
+    display: inline;
+  }
+}
+
+// *** Application Form ***
+// *** inputs ***
+
+.application-form__inputs-list {
+  @extend %list;
+  margin-bottom: 1.2rem;
+
+  @media (min-width: $medium-screen-width) {
+    margin-bottom: 1.7rem;
+  }
+}
+
+.application-form__inputs-item {
+  &:not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+}
+
+.application-form__input {
+  @include size(100%, 40px);
+  padding: 0;
+  text-indent: 0.85rem;
+  border: {
+    width: 1px;
+    style: solid;
+    color: darken($grey, 18%);
+  }
+
+  &::placeholder {
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: $grey;
+  }
+
+  &[required]:focus:valid {
+    outline-color: $secondary-accent-color;
+  }
+
+  &[required]:focus:invalid {
+    outline-color: $primary-accent-color;
+  }
+}
+
+// request button
+
+.application-form__submit-button {
+  @include font-settings(1rem, 2.5);
+  @extend %button;
+  display: block;
+  padding: 0;
+  width: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+// *** PRIVACY POLICY LINK ***
+
+.privacy-policy {
+  text-align: center;
+}
+
+.privacy-policy__link {
+  @include font-settings(0.813rem, 2.8);
+  @extend %link;
+  letter-spacing: 0.08em;
+  color: $dark-grey;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}
