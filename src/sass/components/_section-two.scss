@@ -19,6 +19,8 @@
 
 .section-two__consult-list {
   @extend %list;
+  position: relative;
+  z-index: 1;
   margin-bottom: 36px;
   counter-reset: consults-counter;
 }
@@ -27,7 +29,6 @@
   @include font-settings(1rem, 1.375);
   @extend %double-shadow-small;
   position: relative;
-  z-index: 1;
   padding: 36px 28px;
   height: 230px;
   background-color: $white;
