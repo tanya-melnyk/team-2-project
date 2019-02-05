@@ -1,0 +1,71 @@
+.test {
+  height: 596px;
+}
+
+// SECTION TWO
+.section-two {
+  background-color: $secondary-bg-color;
+}
+
+.section-two__wrapper {
+  padding: 26px 47px;
+}
+
+.section-two__title {
+  @extend %section-title;
+  margin: 0 -0.1rem 2rem;
+  text-align: center;
+}
+
+.section-two__consult-list {
+  @extend %list;
+  margin-bottom: 36px;
+  counter-reset: consults-counter;
+}
+
+.section-two__consult-item {
+  @include font-settings(1rem, 1.375);
+  @extend %double-shadow-small;
+  position: relative;
+  z-index: 1;
+  padding: 36px 28px;
+  height: 230px;
+  background-color: $white;
+  counter-increment: consults-counter;
+
+  &:not(:last-child) {
+    margin-bottom: 39px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -41px;
+    right: -1px;
+    z-index: -1;
+    content: '0' counter(consults-counter);
+    display: block;
+    color: $light;
+    font: {
+      weight: bold;
+      size: 3.125rem;
+      family: $secondary-font-stack;
+    }
+  }
+}
+
+.section-two__consult-desc {
+  position: relative;
+  margin: 0;
+  letter-spacing: 0.03em;
+
+  &::before {
+    @include pseudo;
+    @include absolute-pos($top: -12px, $left: -42px);
+    @include size(60px, 2px);
+    background-color: $turquase;
+  }
+}
+
+.section-two__new-line {
+  display: block;
+}
