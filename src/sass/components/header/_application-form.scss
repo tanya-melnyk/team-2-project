@@ -1,110 +1,23 @@
-// *** HEADER ***
-.page-header {
-  background-color: $main-bg-color;
-}
-
-.page-header__wrapper {
-  padding-top: $medium-padding;
-  padding-bottom: 16px;
-
-  @media (min-width: $medium-screen-width) {
-    padding: 34px 74px 22px;
-  }
-
-  @media (min-width: $large-screen-width) {
-    padding-top: 31px;
-    padding-right: 133px;
-  }
-}
-
-// *** LOGO ***
-.logo__link {
-  @extend %link;
-  padding: 6px 0;
-}
-
-.page-header__inner {
-  @media (min-width: $large-screen-width) {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-// *** INFO BLOCK ***
-.header__info-block {
-  padding: 14px 0;
-
-  @media (min-width: $medium-screen-width) {
-    padding: 20px 0;
-  }
-}
-
-.header__subject {
-  @include font-settings(0.875rem, 1.286);
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-weight: normal;
-  letter-spacing: 0.03em;
-  color: $primary-light-text;
-
-  &--med {
-    margin-bottom: 1.2rem;
-    font-weight: 500;
-    letter-spacing: 0.07em;
-  }
-
-  @media (min-width: $medium-screen-width) {
-    margin-bottom: 2rem;
-    padding-right: 4rem;
-
-    &--med {
-      @include font-settings(1.125rem, 1.44);
-      margin-bottom: 1.75rem;
-      padding-right: 0;
-    }
-  }
-}
-
-.header__lead {
-  @include font-settings(1.25rem, 1.3);
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-
-  &--blue {
-    color: $secondary-accent-color;
-  }
-
-  &--yellow {
-    margin-bottom: 0;
-    color: $yellow-accent-color;
-  }
-
-  @media (min-width: $medium-screen-width) {
-    @include font-settings(2.5rem, 1.25);
-  }
-}
-
-.header__meeting {
-  margin: 0;
-  margin-bottom: 0.1rem;
-  font-weight: bold;
-  color: $yellow-accent-color;
-
-  @media (min-width: $medium-screen-width) {
-    @include font-settings(1.125rem, 1);
-  }
-}
-
 // *** APPLICATION FORM SECTION ***
+
+.application-wrapper {
+  @media (min-width: $large-screen-width) {
+    flex-basis: 460px;
+    padding-top: 68px;
+  }
+}
+
 .application-section {
   padding: 14px 20px 26px;
   background-color: $white;
   box-shadow: 0px 12px 70px 0px rgba(121, 139, 188, 0.48);
 
   @media (min-width: $medium-screen-width) {
-    padding: 26px 76px 40px;
+    padding: 28px 76px 42px;
+  }
+
+  @media (min-width: $large-screen-width) {
+    padding: 34px 35px 50px;
   }
 }
 
@@ -118,7 +31,14 @@
     margin-bottom: 1.5rem;
     text-align: center;
   }
+
+  @media (min-width: $large-screen-width) {
+    margin-bottom: 1.8rem;
+    text-align: left;
+  }
 }
+
+// *** Application subject ***
 
 .application-section__subject {
   @include font-settings(1rem, 1.25);
@@ -132,7 +52,17 @@
     margin-bottom: 1.2rem;
     padding: 0 3.2rem;
   }
+
+  @media (min-width: $large-screen-width) {
+    @include font-settings(2.188rem, 1.2);
+    margin-right: -12px;
+    margin-bottom: 1.4rem;
+    padding: 0;
+    letter-spacing: -0.05em;
+  }
 }
+
+// *** Application description ***
 
 .application-section__desc {
   @include font-settings(0.813rem, 1.385);
@@ -143,7 +73,14 @@
   @media (min-width: $medium-screen-width) {
     letter-spacing: 0.07em;
   }
+
+  @media (min-width: $large-screen-width) {
+    @include font-settings(1.125rem, 1.556);
+    margin-right: -10px;
+  }
 }
+
+// new line hack for mobile screen
 
 .new-line {
   display: block;
@@ -154,7 +91,7 @@
 }
 
 // *** Application Form ***
-// *** inputs ***
+// *** inputs list ***
 
 .application-form__inputs-list {
   @extend %list;
@@ -163,13 +100,23 @@
   @media (min-width: $medium-screen-width) {
     margin-bottom: 1.7rem;
   }
+
+  @media (min-width: $large-screen-width) {
+    margin-bottom: 2.6rem;
+  }
 }
 
 .application-form__inputs-item {
   &:not(:last-child) {
     margin-bottom: 0.75rem;
+
+    @media (min-width: $large-screen-width) {
+      margin-bottom: 2.2rem;
+    }
   }
 }
+
+// *** inputs ***
 
 .application-form__input {
   @include size(100%, 40px);
@@ -194,6 +141,14 @@
   &[required]:focus:invalid {
     outline-color: $primary-accent-color;
   }
+
+  @media (min-width: $large-screen-width) {
+    height: 60px;
+
+    &::placeholder {
+      font-size: 1.125rem;
+    }
+  }
 }
 
 // request button
@@ -207,6 +162,10 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+
+  @media (min-width: $large-screen-width) {
+    @include font-settings(1.375rem, 2.727);
+  }
 }
 
 // *** PRIVACY POLICY LINK ***
@@ -224,5 +183,13 @@
   &:focus,
   &:hover {
     text-decoration: underline;
+  }
+
+  @media (min-width: $medium-screen-width) {
+    line-height: 2.2;
+  }
+
+  @media (min-width: $large-screen-width) {
+    @include font-settings(1.042rem, 3);
   }
 }
