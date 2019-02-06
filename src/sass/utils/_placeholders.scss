@@ -45,13 +45,13 @@
   }
 }
 
-/// double box-shadow section-3 mob&tab
+/// double box-shadow section-2 mob&tab
 %double-shadow-small {
   box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16),
-    -20px 15px 0px 0px rgba(230, 233, 235, 1);
+    -19px 15px 0px 0px rgba(230, 233, 235, 1);
 }
 
-/// double box-shadow for section-3 desc, section-4 tab&desc, section-6 mob&tab
+/// double box-shadow for section-2 desc, section-3 tab&desc, section-5 mob&tab
 %double-shadow-big {
   box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16),
     -18px 18px 0px 0px rgb(230, 233, 235);

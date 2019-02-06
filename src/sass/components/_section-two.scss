@@ -1,55 +1,102 @@
-.test {
-  height: 596px;
-}
-
 // SECTION TWO
 .section-two {
   background-color: $secondary-bg-color;
 }
 
 .section-two__wrapper {
-  padding: 26px 47px;
+  padding: 26px 47px 38px;
+  
+  @media (min-width: $medium-screen-width) {
+    padding: 42px 26px 58px;
+  }
+
+  @media (min-width: $large-screen-width) {
+    padding: 74px 182px 100px;
+  }
 }
+
+// Section two title
 
 .section-two__title {
   @extend %section-title;
   margin: 0 -0.1rem 2rem;
   text-align: center;
+
+  @media (min-width: $medium-screen-width) {
+    padding: 0 32px;
+    margin-bottom: 3.2rem;
+  }
+
+  @media (min-width: $large-screen-width) {
+    margin-bottom: 6.4rem;
+  }
 }
+
+// consult list
 
 .section-two__consult-list {
   @extend %list;
   position: relative;
   z-index: 1;
-  margin-bottom: 36px;
+  margin-bottom: 34px;
   counter-reset: consults-counter;
+
+  @media (min-width: $medium-screen-width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: $large-screen-width) {
+    margin-bottom: 76px;
+  }
 }
 
 .section-two__consult-item {
+  @include size(226px, 230px);
   @include font-settings(1rem, 1.375);
   @extend %double-shadow-small;
   position: relative;
   padding: 36px 28px;
-  height: 230px;
   background-color: $white;
   counter-increment: consults-counter;
+  
+  @media (max-width: ($medium-screen-width - 1px)) {
+    &:not(:last-child) {
+      margin-bottom: 39px;
+    }
+  }
 
-  &:not(:last-child) {
-    margin-bottom: 39px;
+  @media (min-width: $large-screen-width) {
+    @include size(350px, 277px);
+    padding-top: 56px;
+    padding-right: $small-padding;
+    box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16),
+      -18px 18px 0px 0px rgb(230, 233, 235);
   }
 
   &::before {
     position: absolute;
     top: -41px;
-    right: -1px;
+    right: -2px;
     z-index: -1;
-    content: '0' counter(consults-counter);
     display: block;
-    color: $light;
+    content: "0" counter(consults-counter);
     font: {
       weight: bold;
       size: 3.125rem;
       family: $secondary-font-stack;
+    }
+    color: $light;
+
+    @media (min-width: $medium-screen-width) {
+      top: -57px;
+      font-size: 4.375rem;
+    }
+
+    @media (min-width: $large-screen-width) {
+      top: -122px;
+      font-size: 9.375rem;
     }
   }
 }
@@ -59,6 +106,10 @@
   margin: 0;
   letter-spacing: 0.03em;
 
+  @media (min-width: $large-screen-width) {
+    @include font-settings(1.125rem, 1.944);
+  }
+
   &::before {
     @include pseudo;
     @include absolute-pos($top: -12px, $left: -42px);
@@ -67,6 +118,42 @@
   }
 }
 
+// new line hack
+
 .section-two__new-line {
   display: block;
+
+  @media (min-width: $large-screen-width) {
+    display: inline;
+  }
+}
+
+// Get access button
+
+.access-button {
+  text-align: center;
+}
+
+.access-button__link {
+  @extend %button;
+  @extend %link;
+  padding: 23px 0;
+  font-weight: 700;
+  line-height: 1.429;
+
+  @media (max-width: ($medium-screen-width - 1px)) {
+    text-transform: uppercase;
+  }
+
+  @media (min-width: $medium-screen-width) {
+    padding-left: $large-padding;
+    padding-right: $large-padding;
+    font-size: 1.125rem;
+    letter-spacing: 0.02em;
+  }
+
+  @media (min-width: $large-screen-width) {
+    padding: 36px 78px;
+    font-size: 1.565rem;
+  }
 }
