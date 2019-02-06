@@ -1,0 +1,57 @@
+// SECTION THREE
+.section-three {
+  color: $secondary-dark-text;
+}
+
+.section-three__wrapper {
+  padding-top: 28px;
+}
+
+// INFOGRAPHICS SECTION
+
+// Infohraphics Section Title
+
+.infographics__title {
+  @extend %section-title;
+  margin: 0;
+  padding-right: 42px;
+}
+
+// Infohraphics Overview Block
+
+.infographics__overview {
+  padding-top: 21px;
+}
+
+.infographics__overview-subtitle {
+  @include font-settings(0.875rem, 1.429);
+  margin: 0 0 18px;
+  font-weight: 800;
+  letter-spacing: -0.08em;
+}
+
+// new line hack
+
+.section-three__new-line {
+  display: block;
+
+  @media (min-width: $medium-screen-width) {
+    display: inline;
+  }
+}
+
+.infographics__inner {
+  padding-left: 16px;
+}
+
+// Infohraphics Overview Block List
+
+.infographics__overview-list {
+  @extend %list;
+}
+
+.infographics__overview-number {
+  @include font-settings(1.875rem, 1);
+  font-weight: bold;
+  color: $secondary-accent-color;
+}
