@@ -14,6 +14,7 @@
     padding-bottom: 100px;
   }
 }
+
 .section-one__title {
   @extend %section-title;
   width: 296px;
@@ -30,6 +31,7 @@
     width: 570px;
     padding: 0 80px 0 0;
   }
+
   &__line {
     display: none;
     padding-right: 5px;
@@ -39,6 +41,7 @@
     }
   }
 }
+
 .section-one__list {
   display: block;
   margin: 0 0 0 24px;
@@ -54,6 +57,7 @@
     margin: 0 0 0 72px;
   }
 }
+
 .section-one__item {
   @include font-settings(0.875rem, 1.429);
   width: 225px;
@@ -71,6 +75,7 @@
     padding: 0 20px 8px 16px;
   }
 }
+
 .section-one__item__line {
   display: block;
 }
