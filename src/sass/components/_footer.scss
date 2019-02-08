@@ -1,0 +1,87 @@
+.footer-page {
+  background-color: $main-bg-color;
+}
+.footer-page__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 480px;
+  background: url(/images/footer/photoM.png), url(/images/footer/starsM.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom, top;
+
+  @media (min-width: $medium-screen-width) {
+    height: 460px;
+    background: url(/images/footer/photoT.png), url(/images/footer/starsT.png);
+    background-size: initial;
+    background-repeat: no-repeat;
+    background-position: 45% 70%, 100% 20%;
+  }
+  @media (min-width: $large-screen-width) {
+    height: 1050px;
+    align-items: flex-start;
+    background: url(/images/footer/photoD.png), url(/images/footer/starsD.png);
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+    background-position: bottom, 100% 20%;
+  }
+}
+.footer-page__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  @media (min-width: $medium-screen-width) {
+    flex-direction: row;
+    margin: 0 300px 5px 0;
+  }
+  @media (min-width: $large-screen-width) {
+    margin: 0 0 30px 0;
+  }
+}
+.footer-page__button-link {
+  @include font-settings(1.25rem, 3);
+  color: $secondary-accent-color;
+  font-family: $main-font-stack;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 42px 0 0 0;
+
+  @media (min-width: $medium-screen-width) {
+    @include font-settings(1.875rem, 2);
+    padding: 74px 0 0 0;
+  }
+  @media (min-width: $large-screen-width) {
+    @include font-settings(3.75rem, 1);
+    font-weight: 600;
+    align-items: center;
+    padding: 274px 160px 0 0;
+    margin: 0 254px;
+  }
+}
+.footer-page__logo__link {
+  @extend %link;
+  @media (min-width: $large-screen-width) {
+    padding: 0;
+  }
+}
+.footer-page__logo__text {
+  @include font-settings(0.875rem, 4.285) letter-spacing: 0.07em;
+  color: $primary-light-text;
+  font-family: $main-font-stack;
+  margin: 0;
+
+  @media (min-width: $medium-screen-width) {
+    @include font-settings(1.125rem, 3.333);
+    padding: 0 0 0 20px;
+  }
+  @media (min-width: $large-screen-width) {
+    @include font-settings(1.5265rem, 2.4);
+    color: $primary-light-text;
+    font-family: $main-font-stack;
+  }
+}
