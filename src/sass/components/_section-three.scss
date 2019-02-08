@@ -18,25 +18,18 @@
   background: {
     image: url('../images/section-three/map.png');
     repeat: no-repeat;
-    position: 48px 621px;
+    position: right 621px;
   }
 
   @media (min-width: $medium-screen-width) {
-    background: {
-      image: url('../images/section-three/map-blue.png');
-      position: 369px 411px;
-    }
-  }
-
-  @media (min-width: $large-screen-width) {
-    background-position: 725px 557px;
+    background: none;
   }
 }
 
 .section-three__wrapper {
   padding-top: 28px;
   padding-bottom: 34px;
-
+  
   @media (min-width: $medium-screen-width) {
     padding: 45px 34px 52px;
   }
@@ -101,9 +94,14 @@
 
 .infographics__inner {
   padding-left: 16px;
-
+  
   @media (min-width: $medium-screen-width) {
     padding-left: 58px;
+    background: {
+      image: url('../images/section-three/map-blue.png');
+      repeat: no-repeat;
+      position: 335px bottom;
+    }
   }
 }
 
