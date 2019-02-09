@@ -990,7 +990,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 480px;
-  background: url(/images/footer/photoM.png), url(/images/footer/starsM.png);
+  background: url("../images/footer/photoM.png"), url("../images/footer/starsM.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom, top;
@@ -1286,7 +1286,7 @@ body {
 
   .footer-page__wrapper {
     height: 460px;
-    background: url(/images/footer/photoT.png), url(/images/footer/starsT.png);
+    background: url("../images/footer/photoT.png"), url("../images/footer/starsT.png");
     background-size: initial;
     background-repeat: no-repeat;
     background-position: 45% 70%, 100% 20%;
@@ -1572,7 +1572,7 @@ body {
   .footer-page__wrapper {
     height: 1050px;
     align-items: flex-start;
-    background: url(/images/footer/photoD.png), url(/images/footer/starsD.png);
+    background: url("../images/footer/photoD.png"), url("../images/footer/starsD.png");
     background-size: contain, cover;
     background-repeat: no-repeat;
     background-position: bottom, 100% 20%;
