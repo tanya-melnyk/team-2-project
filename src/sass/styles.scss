@@ -1,0 +1,46 @@
+// Файлы должны быть импортированы в соответствии с 
+// папками размещения, один за другим, в следующем порядке:
+
+// abstracts/
+// vendors/
+// base/
+// layout/
+// components/
+// pages/
+// themes/
+// Чтобы улучшить читаемость, главный файл должен следовать 
+// этим рекомендациям:
+
+// один файл на один @import;
+// один @import на строку;
+// не вставлять пустую строку между файлами из одной папки;
+// вставлять пустую строку после последнего импорта из папки;
+// не писать расширения файлов и нижние подчеркивания.
+
+/*
+   Import partials below
+*/
+@charset 'utf-8';
+
+// Utilities (abstacts, helpers)
+@import './utils/variables';
+@import './utils/functions';
+@import './utils/mixins';
+@import './utils/placeholders';
+
+// Base styles
+@import './base/normalize';
+@import './base/typography';
+@import './base/base';
+
+// Components (modules)
+@import './components/header/header';
+@import './components/header/logo';
+@import './components/header/info-block';
+@import './components/header/application-form';
+@import './components/section-one';
+@import './components/section-two';
+@import './components/section-three';
+@import './components/section-four';
+// @import './components/section-five';
+@import './components/footer';

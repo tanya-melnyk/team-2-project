@@ -1,0 +1,45 @@
+/// FONT STACKS 
+$main-font-stack: "Acrom", sans-serif;
+$secondary-font-stack: "Montserrat", sans-serif;
+
+/// BASIC COLORS
+$white:            #ffffff;
+$light:            #fbfcfb;
+$light-grey:       #edf0f2;
+$medium-grey:      #e6e9eb;
+$grey:             #a2a2a2;
+$medium-dark-grey: #6b6f7a;
+$dark-grey:        #5d6066;
+$dark:             #222222;
+$black:            #000000;
+
+$turquase:  #00eaff;
+$yellow:    #f9ae23;
+$orange:    #ff6c0a;
+$blue:      #181c27;
+$dark-blue: #1b202a;
+
+/// text colors
+$primary-light-text: $white;
+$primary-dark-text: $dark;
+$secondary-dark-text: $dark-blue;
+
+/// theme colors
+$main-bg-color: $blue;
+$secondary-bg-color: $light-grey;
+$primary-accent-color: $orange;
+$secondary-accent-color: $turquase;
+$yellow-accent-color: $yellow;
+
+/// BASIC SIZES
+/// Breakpoints
+$medium-screen-width: 768px;
+$large-screen-width: 1504px;
+/// Containers
+$small-container: 320px;
+$medium-container: $medium-screen-width;
+$large-container: $large-screen-width;
+/// Paddings
+$small-padding: 10px;
+$medium-padding: 20px;
+$large-padding: 30px;
