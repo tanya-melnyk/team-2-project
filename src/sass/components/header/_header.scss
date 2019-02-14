@@ -22,5 +22,7 @@
   @media (min-width: $large-screen-width) {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 34px;
   }
 }
