@@ -1,17 +1,17 @@
 .section-one__wrapper {
   display: block;
   width: 260px;
-  padding: 26px 0 40px 0;
+  padding: 26px 0 42px 0;
 
   @media (min-width: $medium-screen-width) {
     width: 640px;
-    padding: 45px 0 55px 0;
+    padding: 45px 0 47px 0;
   }
 
   @media (min-width: $large-screen-width) {
     display: flex;
     padding-top: 124px;
-    padding-bottom: 100px;
+    padding-bottom: 64px;
   }
 }
 .section-one__title {
