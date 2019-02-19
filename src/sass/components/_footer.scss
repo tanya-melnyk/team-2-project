@@ -1,5 +1,18 @@
 .footer-page {
-  background-color: $main-bg-color;
+  display: block;
+  height: 480px;
+  background: url(../images/footer/photoM.jpg),$main-bg-color ;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (min-width: $medium-screen-width){
+    height: 460px;
+    background-image: url(../images/footer/photoT.jpg);
+  }
+  @media (min-width: $large-screen-width){
+    height: 1050px;
+    background-image: url(../images/footer/photoD.jpg);
+  }
 }
 .footer-page__wrapper {
   display: flex;
@@ -7,25 +20,13 @@
   justify-content: space-between;
   align-items: center;
   height: 480px;
-  background: url('../images/footer/photoM.png'), url('../images/footer/starsM.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom, top;
-
+  
   @media (min-width: $medium-screen-width) {
     height: 460px;
-    background: url('../images/footer/photoT.png'), url('../images/footer/starsT.png');
-    background-size: initial;
-    background-repeat: no-repeat;
-    background-position: 45% 70%, 100% 20%;
   }
   @media (min-width: $large-screen-width) {
     height: 1050px;
     align-items: flex-start;
-    background: url('../images/footer/photoD.png'), url('../images/footer/starsD.png');
-    background-size: contain, cover;
-    background-repeat: no-repeat;
-    background-position: bottom, 100% 20%;
   }
 }
 .footer-page__logo {
