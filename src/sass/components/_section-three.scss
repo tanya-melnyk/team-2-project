@@ -39,7 +39,7 @@
     justify-content: space-between;
     align-items: flex-end;
     padding-top: 76px;
-    padding-bottom: 136px;
+    padding-bottom: 142px;
   }
 }
 
@@ -210,6 +210,7 @@
   }
   
   @media (min-width: $large-screen-width) {
+    margin-bottom: -6px;
     padding-left: 56px;
   }
 }
