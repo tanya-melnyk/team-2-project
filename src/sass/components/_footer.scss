@@ -37,10 +37,10 @@
   padding: 0;
   @media (min-width: $medium-screen-width) {
     flex-direction: row;
-    margin: 0 300px 5px 0;
+    margin: 0 214px 5px 0;
   }
   @media (min-width: $large-screen-width) {
-    margin: 0 0 30px 0;
+    margin: 0 0 44px 0;
   }
 }
 .footer-page__button-link {
@@ -60,7 +60,7 @@
     @include font-settings(3.75rem, 1);
     font-weight: 600;
     align-items: center;
-    padding: 274px 160px 0 0;
+    padding: 250px 160px 0 0;
     margin: 0 254px;
   }
 }
@@ -71,7 +71,8 @@
   }
 }
 .footer-page__logo__text {
-  @include font-settings(0.875rem, 4.285) letter-spacing: 0.07em;
+  @include font-settings(0.875rem, 4.285);
+  letter-spacing: 0.07em;
   color: $primary-light-text;
   font-family: $main-font-stack;
   margin: 0;
