@@ -1,0 +1,273 @@
+// new line hack
+.section-five__new-line {
+  display: block;
+
+  @media (min-width: $large-screen-width) {
+    display: inline;
+  }
+}
+
+// SECTION FIVE
+.section-five {
+  padding-top: 28px;
+  padding-bottom: 30px;
+}
+
+// Section five title
+.section-five__title {
+  @extend %section-title;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  padding-left: 16px;
+  color: $secondary-dark-text;
+}
+
+.section-five__subtitle {
+  @include font-settings(1rem, 1.1);
+  display: inline-block;
+  margin-top: 0;
+  padding-left: 4px;
+  padding-right: 2px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  background-color: $secondary-bg-color;
+}
+
+.section-five__desc {
+  margin-top: 0;
+  line-height: 1.5;
+  color: $medium-dark-grey;
+  letter-spacing: 0.08em;
+}
+
+// Prizes Section
+.prizes {
+  margin-bottom: 24px;
+  padding: 20px 16px;
+}
+
+.prizes__title {
+  margin-bottom: 26px;
+}
+
+// prizes list
+
+.prizes__list {
+  @extend %list;
+  position: relative;
+  z-index: 1;
+  // margin-bottom: 34px;
+  counter-reset: prizes-counter;
+
+  // @media (min-width: $medium-screen-width) {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   margin-bottom: 38px;
+  // }
+
+  // @media (min-width: $large-screen-width) {
+  //   margin-bottom: 76px;
+  // }
+}
+
+.prizes__item {
+  @extend %double-shadow-big;
+  position: relative;
+  padding: 40px 10px 24px 24px;
+  width: 226px;
+  color: $black;
+  background-color: $white;
+  counter-increment: prizes-counter;
+
+  @media (max-width: ($medium-screen-width - 1px)) {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+
+  // @media (min-width: $large-screen-width) {
+  //   @include size(350px, 277px);
+  //   padding-top: 56px;
+  //   padding-right: $small-padding;
+  //   box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16),
+  //     -18px 18px 0px 0px rgb(230, 233, 235);
+  // }
+
+  &::before {
+    position: absolute;
+    top: -51px;
+    right: -2px;
+    z-index: -1;
+    display: block;
+    content: "0" counter(prizes-counter);
+    font: {
+      weight: bold;
+      size: 4.375rem;
+      family: $secondary-font-stack;
+    }
+    color: $secondary-bg-color;
+
+    // @media (min-width: $medium-screen-width) {
+    //   top: -57px;
+    //   font-size: 4.375rem;
+    // }
+
+    // @media (min-width: $large-screen-width) {
+    //   top: -122px;
+    //   font-size: 9.375rem;
+    // }
+  }
+}
+
+.prizes__item-name {
+  @include font-settings(1.125rem, 1.45);
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+
+  // @media (min-width: $large-screen-width) {
+  //   @include font-settings(1.125rem, 1.944);
+  // }
+
+  &::before {
+    @include pseudo;
+    @include absolute-pos($top: -15px, $left: -38px);
+    @include size(60px, 2px);
+    background-color: $turquase;
+  }
+}
+
+.prizes__item-desc {
+  margin-bottom: 0.9rem;
+
+  &--bold {
+    font-weight: 800;
+    line-height: 1.4;
+    color: $black;
+    letter-spacing: -0.04em;
+  }
+}
+
+.prizes__item-pic {
+  display: block;
+  padding-left: 28px;
+
+  &--last {
+    margin-top: -10px;
+    margin-left: -36px;
+    margin-bottom: -6px;
+  }
+}
+
+// Tender Section
+.tender {
+  padding: 20px 16px 20px 18px;
+  background: {
+    image: url("../images/section-five/tender.png");
+    repeat: no-repeat;
+    position: center 18px;
+  }
+}
+
+.tender__title {
+  margin-bottom: 2.1rem;
+}
+
+.tender__lead {
+  @include font-settings(1.5rem, 1.25);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.tender__desc {
+  margin-bottom: 0;
+}
+
+// Partners Section
+.partners {
+  padding: 20px 0;
+}
+
+.partners__title {
+  margin-left: 12px;
+  margin-bottom: 2.1rem;
+}
+
+// partners list
+.partners__list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  height: 288px;
+}
+
+.partners__item {
+  position: relative;
+
+  @media (max-width: ($medium-screen-width - 1px)) {
+    &--kuehne {
+      top: -2px;
+      left: 2px;
+    }
+
+    &--crytek,
+    &--ciklum,
+    &--inovecs,
+    &--lenal {
+      top: -4px;
+    }
+
+    &--softserve,
+    &--globallogic,
+    &--alfabank,
+    &--goiteens,
+    &--infopulse,
+    &--luxoft {
+      top: 4px;
+    }
+
+    &--globallogic {
+      left: -4px;
+    }
+
+    &--goiteens {
+      left: -28px;
+    }
+
+    &--ubisoft {
+      top: -8px;
+      left: -12px;
+    }
+
+    &--luxoft {
+      left: -20px;
+    }
+
+    &--terrasoft {
+      top: -2px;
+      left: 14px;
+    }
+
+    &--grossum {
+      top: 38px;
+      left: -172px;
+    }
+
+    &--templatemonster {
+      left: 120px;
+    }
+  }
+}
+
+.partners_item-link {
+  @extend %link;
+}
