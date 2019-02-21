@@ -7,10 +7,25 @@
   }
 }
 
+// no wrap hack
+.no-wrap {
+  white-space: nowrap;
+}
+
 // SECTION FIVE
 .section-five {
   padding-top: 28px;
   padding-bottom: 30px;
+
+  @media (min-width: $medium-screen-width) {
+    padding-top: 46px;
+    padding-bottom: 22px;
+  }
+
+  @media (min-width: $large-screen-width) {
+    padding-top: 86px;
+    padding-bottom: 42px;
+  }
 }
 
 // Section five title
@@ -18,8 +33,18 @@
   @extend %section-title;
   margin-top: 0;
   margin-bottom: 0.5rem;
-  padding-left: 16px;
+  margin-left: 16px;
   color: $secondary-dark-text;
+
+  @media (min-width: $medium-screen-width) {
+    margin-left: 62px;
+  }
+
+  @media (min-width: $large-screen-width) {
+    margin-left: 0;
+    margin-right: 700px;
+    margin-bottom: 54px;
+  }
 }
 
 .section-five__subtitle {
@@ -40,14 +65,38 @@
   letter-spacing: 0.08em;
 }
 
+.section-five__inner {
+  @media (min-width: $large-screen-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 // Prizes Section
 .prizes {
   margin-bottom: 24px;
   padding: 20px 16px;
+
+  @media (min-width: $large-screen-width) {
+    order: 1;
+    padding-top: 36px;
+    padding-left: 0;
+  }
 }
 
 .prizes__title {
   margin-bottom: 26px;
+
+  @media (min-width: $medium-screen-width) {
+    margin-bottom: 40px;
+    margin-left: 48px;
+  }
+
+  @media (min-width: $large-screen-width) {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
 }
 
 // prizes list
@@ -56,42 +105,25 @@
   @extend %list;
   position: relative;
   z-index: 1;
-  // margin-bottom: 34px;
   counter-reset: prizes-counter;
 
-  // @media (min-width: $medium-screen-width) {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   margin-bottom: 38px;
-  // }
+  @media (min-width: $medium-screen-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 
-  // @media (min-width: $large-screen-width) {
-  //   margin-bottom: 76px;
-  // }
+  @media (min-width: $large-screen-width) {
+    justify-content: flex-start;
+  }
 }
 
 .prizes__item {
-  @extend %double-shadow-big;
   position: relative;
   padding: 40px 10px 24px 24px;
   width: 226px;
   color: $black;
   background-color: $white;
   counter-increment: prizes-counter;
-
-  @media (max-width: ($medium-screen-width - 1px)) {
-    &:not(:last-child) {
-      margin-bottom: 60px;
-    }
-  }
-
-  // @media (min-width: $large-screen-width) {
-  //   @include size(350px, 277px);
-  //   padding-top: 56px;
-  //   padding-right: $small-padding;
-  //   box-shadow: 0px 15px 32px 0px rgba(0, 0, 0, 0.16),
-  //     -18px 18px 0px 0px rgb(230, 233, 235);
-  // }
 
   &::before {
     position: absolute;
@@ -106,16 +138,69 @@
       family: $secondary-font-stack;
     }
     color: $secondary-bg-color;
+  }
 
-    // @media (min-width: $medium-screen-width) {
-    //   top: -57px;
-    //   font-size: 4.375rem;
-    // }
+  @media (max-width: ($medium-screen-width - 1px)) {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
 
-    // @media (min-width: $large-screen-width) {
-    //   top: -122px;
-    //   font-size: 9.375rem;
-    // }
+  @media (max-width: ($large-screen-width - 1px)) {
+    box-shadow: 0px 15px 46px 0px rgba(0, 0, 0, 0.16),
+      -18px 18px 0px 0px rgb(230, 233, 235);
+  }
+
+  @media (min-width: $large-screen-width) {
+    display: flex;
+    padding-top: 32px;
+    padding-left: 0;
+
+    &::before {
+      top: -28px;
+      z-index: 1;
+      transform: rotate(270deg);
+      font: {
+        weight: 800;
+        size: 1.875rem;
+        family: $main-font-stack;
+      }
+    }
+
+    &:nth-child(1) {
+      margin-right: 20px;
+      width: 370px;
+
+      &::before {
+        right: -30px;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-right: 40px;
+      width: 320px;
+
+      &::before {
+        right: -48px;
+      }
+    }
+
+    &:nth-child(3) {
+      padding-right: 0;
+      width: 400px;
+    }
+  }
+}
+
+.prizes__info {
+  @media (min-width: $large-screen-width) {
+    &--narrow {
+      width: 196px;
+    }
+
+    &--wide {
+      width: 258px;
+    }
   }
 }
 
@@ -128,15 +213,17 @@
   text-transform: uppercase;
   letter-spacing: -0.04em;
 
-  // @media (min-width: $large-screen-width) {
-  //   @include font-settings(1.125rem, 1.944);
-  // }
+  @media (max-width: ($large-screen-width - 1px)) {
+    &::before {
+      @include pseudo;
+      @include absolute-pos($top: -15px, $left: -38px);
+      @include size(60px, 2px);
+      background-color: $turquase;
+    }
+  }
 
-  &::before {
-    @include pseudo;
-    @include absolute-pos($top: -15px, $left: -38px);
-    @include size(60px, 2px);
-    background-color: $turquase;
+  @media (min-width: $large-screen-width) {
+    @include font-settings(1.5rem, 1.25);
   }
 }
 
@@ -149,16 +236,43 @@
     color: $black;
     letter-spacing: -0.04em;
   }
+
+  @media (min-width: $medium-screen-width) {
+    &--first {
+      margin-bottom: 4.2rem;
+    }
+  }
+}
+
+.prizes__hidden-text {
+  @media (max-width: ($large-screen-width - 1px)) {
+    display: none;
+  }
 }
 
 .prizes__item-pic {
   display: block;
   padding-left: 28px;
+  flex-shrink: 0;
 
   &--last {
     margin-top: -10px;
     margin-left: -36px;
     margin-bottom: -6px;
+  }
+
+  @media (min-width: $large-screen-width) {
+    padding-left: 0;
+
+    &--sec {
+      margin-top: -26px;
+      margin-left: 8px;
+    }
+
+    &--last {
+      margin-top: 0;
+      margin-left: -54px;
+    }
   }
 }
 
@@ -168,7 +282,18 @@
   background: {
     image: url("../images/section-five/tender.png");
     repeat: no-repeat;
-    position: center 18px;
+    position: center 7%;
+  }
+
+  @media (min-width: $medium-screen-width) {
+    margin-left: 194px;
+    padding: 16px 0 20px;
+    width: 378px;
+    background-position: 96% 5%;
+  }
+
+  @media (min-width: $large-screen-width) {
+    margin-left: 0;
   }
 }
 
@@ -192,11 +317,25 @@
 // Partners Section
 .partners {
   padding: 20px 0;
+
+  @media (min-width: $medium-screen-width) {
+    padding-top: 16px;
+    padding-left: 64px;
+    padding-right: 34px;
+    width: 748px;
+  }
+
+  @media (min-width: $medium-screen-width) {
+    margin-right: 130px;
+  }
 }
 
 .partners__title {
-  margin-left: 12px;
   margin-bottom: 2.1rem;
+
+  @media (max-width: ($medium-screen-width - 1px)) {
+    margin-left: 12px;
+  }
 }
 
 // partners list
@@ -208,6 +347,10 @@
   align-items: center;
   align-content: space-between;
   height: 288px;
+
+  @media (min-width: $medium-screen-width) {
+    height: 150px;
+  }
 }
 
 .partners__item {
@@ -264,6 +407,69 @@
 
     &--templatemonster {
       left: 120px;
+    }
+  }
+
+  @media (min-width: $medium-screen-width) {
+    &--epam {
+      margin-right: 36px;
+    }
+
+    &--kuehne {
+      margin-right: 30px;
+    }
+
+    &--ciklum {
+      order: 1;
+      margin-right: 50px;
+    }
+
+    &--crytek {
+      order: 2;
+      margin-right: 30px;
+    }
+
+    &--softserve {
+      order: 3;
+    }
+
+    &--globallogic {
+      order: 3;
+      margin-right: 26px;
+    }
+
+    &--goiteens {
+      order: 4;
+      margin-right: 32px;
+    }
+
+    &--alfabank {
+      order: 5;
+      margin-right: 30px;
+    }
+
+    &--inovecs {
+      order: 6;
+      margin-right: 20px;
+    }
+
+    &--infopulse {
+      order: 6;
+    }
+
+    &--grossum,
+    &--templatemonster {
+      order: 7;
+    }
+
+    &--luxoft {
+      order: 8;
+    }
+
+    &--ubisoft,
+    &--lenal,
+    &--terrasoft {
+      order: 9;
     }
   }
 }
