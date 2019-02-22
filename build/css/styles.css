@@ -6,6 +6,7 @@
 .privacy-policy__link,
 .access-button__link,
 .section-four__wrapper .section-four__button .section-four__button__link,
+.partners_item-link,
 .footer-page__logo__link {
   display: inline-block;
   text-decoration: none;
@@ -15,7 +16,9 @@
 .section-two__consult-list,
 .infographics__overview-list,
 .infographics__income-list,
-.offers__list {
+.offers__list,
+.prizes__list,
+.partners__list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -47,7 +50,8 @@
 .section-two__title,
 .infographics__title,
 .offers__title,
-.section-four__wrapper .section-four__slogan {
+.section-four__wrapper .section-four__slogan,
+.section-five__title {
   font-size: 1.25rem;
   line-height: 1.5;
   font-weight: 800;
@@ -526,6 +530,18 @@ body {
   padding-right: 30px;
 }
 
+.new-line__tablet {
+  display: block;
+}
+
+.new-line__desctop {
+  display: block;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
 .page-header {
   background-color: #181c27;
 }
@@ -707,7 +723,7 @@ body {
   display: block;
   margin: 0 0 0 24px;
   padding: 0;
-  list-style-image: url(/images/section-one/arrow.svg);
+  list-style-image: url(../images/section-one/arrow.svg);
 }
 
 .section-one__item {
@@ -782,10 +798,6 @@ body {
   background-color: #00eaff;
 }
 
-.section-two__new-line {
-  display: block;
-}
-
 .access-button {
   text-align: center;
 }
@@ -794,14 +806,6 @@ body {
   padding: 23px 0;
   font-weight: 700;
   line-height: 1.429;
-}
-
-.section-three__new-line {
-  display: block;
-}
-
-.no-wrap {
-  white-space: nowrap;
 }
 
 .section-three {
@@ -980,8 +984,164 @@ body {
   text-transform: uppercase;
 }
 
+.section-five {
+  padding-top: 28px;
+  padding-bottom: 22px;
+}
+
+.section-five__title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  margin-left: 16px;
+  color: #1b202a;
+}
+
+.section-five__subtitle {
+  font-size: 1rem;
+  line-height: 1.1;
+  display: inline-block;
+  margin-top: 0;
+  padding-left: 4px;
+  padding-right: 2px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  background-color: #edf0f2;
+}
+
+.section-five__desc {
+  margin-top: 0;
+  line-height: 1.5;
+  color: #6b6f7a;
+  letter-spacing: 0.08em;
+}
+
+.prizes {
+  margin-bottom: 24px;
+  padding: 20px 16px;
+}
+
+.prizes__title {
+  margin-bottom: 26px;
+}
+
+.prizes__list {
+  position: relative;
+  z-index: 1;
+  counter-reset: prizes-counter;
+}
+
+.prizes__item {
+  position: relative;
+  padding: 40px 10px 24px 24px;
+  width: 226px;
+  color: #000000;
+  background-color: #ffffff;
+  counter-increment: prizes-counter;
+}
+
+.prizes__item::before {
+  position: absolute;
+  top: -51px;
+  right: -2px;
+  z-index: -1;
+  display: block;
+  content: "0" counter(prizes-counter);
+  font-weight: bold;
+  font-size: 4.375rem;
+  font-family: "Montserrat", sans-serif;
+  color: #edf0f2;
+}
+
+.prizes__item-name {
+  font-size: 1.125rem;
+  line-height: 1.45;
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+}
+
+.prizes__item-desc {
+  margin-bottom: 0.9rem;
+}
+
+.prizes__item-desc--bold {
+  font-weight: 800;
+  line-height: 1.4;
+  color: #000000;
+  letter-spacing: -0.04em;
+}
+
+.prizes__item-pic {
+  display: block;
+  padding-left: 28px;
+  flex-shrink: 0;
+}
+
+.prizes__item-pic--last {
+  margin-top: -10px;
+  margin-left: -36px;
+  margin-bottom: -6px;
+}
+
+.tender {
+  padding: 20px 16px 20px 18px;
+  background-image: url("../images/section-five/tender.png");
+  background-repeat: no-repeat;
+  background-position: center 7%;
+}
+
+.tender__title {
+  margin-bottom: 2.1rem;
+}
+
+.tender__lead {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+}
+
+.tender__desc {
+  margin-bottom: 0;
+}
+
+.partners {
+  padding: 20px 0;
+}
+
+.partners__title {
+  margin-bottom: 1.8rem;
+}
+
+.partners__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  margin: 0 -12px;
+  height: 302px;
+}
+
+.partners__item {
+  position: relative;
+  margin: 0 7px;
+  padding: 5px;
+}
+
 .footer-page {
-  background-color: #181c27;
+  display: block;
+  height: 480px;
+  background: url(../images/footer/photoM.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .footer-page__wrapper {
@@ -990,10 +1150,6 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 480px;
-  background: url("../images/footer/photoM.png"), url("../images/footer/starsM.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom, top;
 }
 
 .footer-page__logo {
@@ -1029,7 +1185,8 @@ body {
   .section-two__title,
   .infographics__title,
   .offers__title,
-  .section-four__wrapper .section-four__slogan {
+  .section-four__wrapper .section-four__slogan,
+  .section-five__title {
     font-size: 1.875rem;
     line-height: 1.333;
   }
@@ -1038,6 +1195,10 @@ body {
     width: 768px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+
+  .new-line__tablet {
+    display: inline;
   }
 
   .page-header__wrapper {
@@ -1156,10 +1317,6 @@ body {
     letter-spacing: 0.02em;
   }
 
-  .section-three__new-line {
-    display: inline;
-  }
-
   .section-three {
     background: none;
   }
@@ -1211,7 +1368,7 @@ body {
   }
 
   .infographics__income {
-    padding-right: 410px;
+    margin-right: 400px;
   }
 
   .offers {
@@ -1284,17 +1441,105 @@ body {
     letter-spacing: 0.02em;
   }
 
+  .section-five {
+    padding-top: 46px;
+    padding-bottom: 16px;
+  }
+
+  .section-five__title {
+    margin-left: 62px;
+  }
+
+  .prizes__title {
+    margin-bottom: 40px;
+    margin-left: 48px;
+  }
+
+  .prizes__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .prizes__item-desc--first {
+    margin-bottom: 4.2rem;
+  }
+
+  .tender {
+    margin-left: 194px;
+    padding: 16px 0 20px;
+    width: 378px;
+    background-position: 96% 5%;
+  }
+
+  .partners {
+    padding-top: 16px;
+    padding-left: 64px;
+    padding-right: 34px;
+    width: 748px;
+  }
+
+  .partners {
+    margin-right: 130px;
+  }
+
+  .partners__list {
+    height: 160px;
+  }
+
+  .partners__item--ciklum {
+    order: 1;
+    left: -10px;
+  }
+
+  .partners__item--crytek {
+    order: 2;
+  }
+
+  .partners__item--softserve,
+  .partners__item--globallogic {
+    order: 3;
+  }
+
+  .partners__item--goiteens {
+    order: 4;
+  }
+
+  .partners__item--alfabank {
+    order: 5;
+  }
+
+  .partners__item--inovecs,
+  .partners__item--infopulse {
+    order: 6;
+  }
+
+  .partners__item--grossum,
+  .partners__item--templatemonster {
+    order: 7;
+  }
+
+  .partners__item--luxoft {
+    order: 8;
+  }
+
+  .partners__item--ubisoft,
+  .partners__item--lenal,
+  .partners__item--terrasoft {
+    order: 9;
+  }
+
+  .footer-page {
+    height: 460px;
+    background-image: url(../images/footer/photoT.jpg);
+  }
+
   .footer-page__wrapper {
     height: 460px;
-    background: url("../images/footer/photoT.png"), url("../images/footer/starsT.png");
-    background-size: initial;
-    background-repeat: no-repeat;
-    background-position: 45% 70%, 100% 20%;
   }
 
   .footer-page__logo {
     flex-direction: row;
-    margin: 0 300px 5px 0;
+    margin: 0 214px 5px 0;
   }
 
   .footer-page__button-link {
@@ -1315,7 +1560,8 @@ body {
   .section-two__title,
   .infographics__title,
   .offers__title,
-  .section-four__wrapper .section-four__slogan {
+  .section-four__wrapper .section-four__slogan,
+  .section-five__title {
     font-size: 3rem;
     line-height: 1.25;
   }
@@ -1324,6 +1570,10 @@ body {
     width: 1504px;
     padding-left: 182px;
     padding-right: 20px;
+  }
+
+  .new-line__desctop {
+    display: inline;
   }
 
   .page-header__wrapper {
@@ -1335,11 +1585,12 @@ body {
   .page-header__inner {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 34px;
   }
 
   .header__info-block {
     flex-basis: 652px;
-    padding-top: 54px;
     padding-bottom: 54px;
   }
 
@@ -1375,7 +1626,7 @@ body {
 
   .application-wrapper {
     flex-basis: 460px;
-    padding-top: 68px;
+    padding-bottom: 14px;
   }
 
   .application-section {
@@ -1490,10 +1741,6 @@ body {
     line-height: 1.944;
   }
 
-  .section-two__new-line {
-    display: inline;
-  }
-
   .access-button__link {
     padding: 36px 78px;
     font-size: 1.565rem;
@@ -1502,8 +1749,9 @@ body {
   .section-three__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     padding-top: 76px;
-    padding-bottom: 136px;
+    padding-bottom: 142px;
   }
 
   .infographics__title {
@@ -1512,7 +1760,7 @@ body {
   }
 
   .offers {
-    padding-top: 378px;
+    margin-bottom: -6px;
     padding-left: 56px;
   }
 
@@ -1569,17 +1817,120 @@ body {
     height: 110px;
   }
 
+  .section-five {
+    padding-top: 86px;
+    padding-bottom: 42px;
+  }
+
+  .section-five__title {
+    margin-left: 0;
+    margin-right: 700px;
+    margin-bottom: 54px;
+  }
+
+  .section-five__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .prizes {
+    order: 1;
+    padding-top: 36px;
+    padding-left: 0;
+  }
+
+  .prizes__title {
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .prizes__list {
+    justify-content: flex-start;
+  }
+
+  .prizes__item {
+    display: flex;
+    padding-top: 32px;
+    padding-left: 0;
+  }
+
+  .prizes__item::before {
+    top: -28px;
+    z-index: 1;
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+    font-weight: 800;
+    font-size: 1.875rem;
+    font-family: "Acrom", sans-serif;
+  }
+
+  .prizes__item:nth-child(1) {
+    margin-right: 20px;
+    width: 370px;
+  }
+
+  .prizes__item:nth-child(1)::before {
+    right: -30px;
+  }
+
+  .prizes__item:nth-child(2) {
+    margin-right: 40px;
+    width: 320px;
+  }
+
+  .prizes__item:nth-child(2)::before {
+    right: -48px;
+  }
+
+  .prizes__item:nth-child(3) {
+    padding-right: 0;
+    width: 400px;
+  }
+
+  .prizes__info--narrow {
+    width: 196px;
+  }
+
+  .prizes__info--wide {
+    width: 258px;
+  }
+
+  .prizes__item-name {
+    font-size: 1.5rem;
+    line-height: 1.25;
+  }
+
+  .prizes__item-pic {
+    padding-left: 0;
+  }
+
+  .prizes__item-pic--sec {
+    margin-top: -26px;
+    margin-left: 8px;
+  }
+
+  .prizes__item-pic--last {
+    margin-top: 0;
+    margin-left: -54px;
+  }
+
+  .tender {
+    margin-left: 0;
+  }
+
+  .footer-page {
+    height: 1050px;
+    background-image: url(../images/footer/photoD.jpg);
+  }
+
   .footer-page__wrapper {
     height: 1050px;
     align-items: flex-start;
-    background: url("../images/footer/photoD.png"), url("../images/footer/starsD.png");
-    background-size: contain, cover;
-    background-repeat: no-repeat;
-    background-position: bottom, 100% 20%;
   }
 
   .footer-page__logo {
-    margin: 0 0 30px 0;
+    margin: 0 0 44px 0;
   }
 
   .footer-page__button-link {
@@ -1587,7 +1938,7 @@ body {
     line-height: 1;
     font-weight: 600;
     align-items: center;
-    padding: 274px 160px 0 0;
+    padding: 250px 160px 0 0;
     margin: 0 254px;
   }
 
@@ -1600,6 +1951,27 @@ body {
     line-height: 2.4;
     color: #ffffff;
     font-family: "Acrom", sans-serif;
+  }
+}
+
+@media (max-width: 1503px) {
+  .prizes__item {
+    box-shadow: 0px 15px 46px 0px rgba(0, 0, 0, 0.16), -18px 18px 0px 0px #e6e9eb;
+  }
+
+  .prizes__item-name::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -38px;
+    width: 60px;
+    height: 2px;
+    background-color: #00eaff;
+  }
+
+  .prizes__hidden-text {
+    display: none;
   }
 }
 
@@ -1619,6 +1991,31 @@ body {
   .infographics__overview-item:nth-child(5) {
     margin-bottom: 0.7rem;
     padding-right: 16px;
+  }
+
+  .prizes__item:not(:last-child) {
+    margin-bottom: 60px;
+  }
+
+  .partners__title {
+    margin-left: 12px;
+  }
+
+  .partners__item--goiteens {
+    left: -28px;
+  }
+
+  .partners__item--ubisoft {
+    top: -10px;
+    left: -12px;
+  }
+
+  .partners__item--luxoft {
+    left: -20px;
+  }
+
+  .partners__item--terrasoft {
+    left: -80px;
   }
 }
 

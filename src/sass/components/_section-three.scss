@@ -1,17 +1,3 @@
-// new line hack
-.section-three__new-line {
-  display: block;
-
-  @media (min-width: $medium-screen-width) {
-    display: inline;
-  }
-}
-
-// no wrap hack
-.no-wrap {
-  white-space: nowrap;
-}
-
 // SECTION THREE
 .section-three {
   color: $secondary-dark-text;
@@ -37,8 +23,9 @@
   @media (min-width: $large-screen-width) {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     padding-top: 76px;
-    padding-bottom: 136px;
+    padding-bottom: 142px;
   }
 }
 
@@ -167,7 +154,7 @@
   padding-right: $small-padding;
 
   @media (min-width: $medium-screen-width) {
-    padding-right: 410px;
+    margin-right: 400px;
   }
 }
 
@@ -209,7 +196,7 @@
   }
   
   @media (min-width: $large-screen-width) {
-    padding-top: 378px;
+    margin-bottom: -6px;
     padding-left: 56px;
   }
 }
