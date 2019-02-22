@@ -1,9 +1,10 @@
 .footer-page {
   display: block;
   height: 480px;
-  background: url(../images/footer/photoM.jpg),$main-bg-color ;
+  background: url(../images/footer/photoM.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 
   @media (min-width: $medium-screen-width){
     height: 460px;

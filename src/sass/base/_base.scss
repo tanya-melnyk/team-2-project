@@ -42,3 +42,25 @@ body {
     padding-right: $medium-padding;
   }
 }
+
+// new line hacks
+.new-line__tablet {
+  display: block;
+
+  @media (min-width: $medium-screen-width) {
+    display: inline;
+  }
+}
+
+.new-line__desctop {
+  display: block;
+
+  @media (min-width: $large-screen-width) {
+    display: inline;
+  }
+}
+
+// no wrap hack
+.no-wrap {
+  white-space: nowrap;
+}

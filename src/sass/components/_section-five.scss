@@ -1,25 +1,11 @@
-// new line hack
-.section-five__new-line {
-  display: block;
-
-  @media (min-width: $large-screen-width) {
-    display: inline;
-  }
-}
-
-// no wrap hack
-.no-wrap {
-  white-space: nowrap;
-}
-
 // SECTION FIVE
 .section-five {
   padding-top: 28px;
-  padding-bottom: 30px;
+  padding-bottom: 22px;
 
   @media (min-width: $medium-screen-width) {
     padding-top: 46px;
-    padding-bottom: 22px;
+    padding-bottom: 16px;
   }
 
   @media (min-width: $large-screen-width) {
@@ -331,7 +317,7 @@
 }
 
 .partners__title {
-  margin-bottom: 2.1rem;
+  margin-bottom: 1.8rem;
 
   @media (max-width: ($medium-screen-width - 1px)) {
     margin-left: 12px;
@@ -346,48 +332,26 @@
   justify-content: space-between;
   align-items: center;
   align-content: space-between;
-  height: 288px;
+  margin: 0 -12px;
+  height: 302px;
 
   @media (min-width: $medium-screen-width) {
-    height: 150px;
+    height: 160px;
   }
 }
 
 .partners__item {
   position: relative;
+  margin: 0 7px;
+  padding: 5px;
 
   @media (max-width: ($medium-screen-width - 1px)) {
-    &--kuehne {
-      top: -2px;
-      left: 2px;
-    }
-
-    &--crytek,
-    &--ciklum,
-    &--inovecs,
-    &--lenal {
-      top: -4px;
-    }
-
-    &--softserve,
-    &--globallogic,
-    &--alfabank,
-    &--goiteens,
-    &--infopulse,
-    &--luxoft {
-      top: 4px;
-    }
-
-    &--globallogic {
-      left: -4px;
-    }
-
     &--goiteens {
       left: -28px;
     }
 
     &--ubisoft {
-      top: -8px;
+      top: -10px;
       left: -12px;
     }
 
@@ -396,63 +360,34 @@
     }
 
     &--terrasoft {
-      top: -2px;
-      left: 14px;
-    }
-
-    &--grossum {
-      top: 38px;
-      left: -172px;
-    }
-
-    &--templatemonster {
-      left: 120px;
+      left: -80px;
     }
   }
 
   @media (min-width: $medium-screen-width) {
-    &--epam {
-      margin-right: 36px;
-    }
-
-    &--kuehne {
-      margin-right: 30px;
-    }
-
     &--ciklum {
       order: 1;
-      margin-right: 50px;
+      left: -10px;
     }
 
     &--crytek {
       order: 2;
-      margin-right: 30px;
     }
 
-    &--softserve {
-      order: 3;
-    }
-
+    &--softserve,
     &--globallogic {
       order: 3;
-      margin-right: 26px;
     }
 
     &--goiteens {
       order: 4;
-      margin-right: 32px;
     }
 
     &--alfabank {
       order: 5;
-      margin-right: 30px;
     }
 
-    &--inovecs {
-      order: 6;
-      margin-right: 20px;
-    }
-
+    &--inovecs,
     &--infopulse {
       order: 6;
     }
