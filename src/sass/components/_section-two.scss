@@ -118,16 +118,6 @@
   }
 }
 
-// new line hack
-
-.section-two__new-line {
-  display: block;
-
-  @media (min-width: $large-screen-width) {
-    display: inline;
-  }
-}
-
 // Get access button
 
 .access-button {
