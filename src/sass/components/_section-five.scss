@@ -411,4 +411,9 @@
 
 .partners_item-link {
   @extend %link;
+  transition: filter 0.1s linear;
+
+  &:hover {
+    filter: invert(50%);
+  }
 }

@@ -16,6 +16,10 @@ body {
   font-family: $main-font-stack;
   font-size: 0.875rem;
   color: $primary-dark-text;
+
+  @media (min-width: $medium-screen-width) {
+    font-size: 1.125rem;
+  }
 }
 
 .img {
@@ -52,7 +56,7 @@ body {
   }
 }
 
-.new-line__desctop {
+.new-line__desktop {
   display: block;
 
   @media (min-width: $large-screen-width) {
