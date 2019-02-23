@@ -34,7 +34,7 @@
 %section-title {
   @include font-settings(1.25rem, 1.5);
   font-weight: 800;
-  letter-spacing: -0.08em;
+  letter-spacing: -0.04em;
 
   @media (min-width: $medium-screen-width) {
     @include font-settings(1.875rem, 1.333);
