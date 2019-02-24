@@ -1,7 +1,7 @@
 // SECTION FIVE
 .section-five {
   padding-top: 28px;
-  padding-bottom: 20px;
+  padding-bottom: 21px;
 
   @media (min-width: $medium-screen-width) {
     padding-top: 46px;
@@ -10,7 +10,7 @@
 
   @media (min-width: $large-screen-width) {
     padding-top: 86px;
-    padding-bottom: 42px;
+    padding-bottom: 40px;
   }
 }
 
@@ -188,7 +188,7 @@
     }
 
     &--wide {
-      width: 258px;
+      width: 253px;
     }
   }
 }
