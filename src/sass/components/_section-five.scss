@@ -1,7 +1,7 @@
 // SECTION FIVE
 .section-five {
   padding-top: 28px;
-  padding-bottom: 22px;
+  padding-bottom: 21px;
 
   @media (min-width: $medium-screen-width) {
     padding-top: 46px;
@@ -10,7 +10,7 @@
 
   @media (min-width: $large-screen-width) {
     padding-top: 86px;
-    padding-bottom: 42px;
+    padding-bottom: 40px;
   }
 }
 
@@ -40,15 +40,14 @@
   padding-left: 4px;
   padding-right: 2px;
   font-weight: 800;
-  letter-spacing: -0.04em;
   background-color: $secondary-bg-color;
 }
 
 .section-five__desc {
   margin-top: 0;
+  font-size: 0.875rem;
   line-height: 1.5;
   color: $medium-dark-grey;
-  letter-spacing: 0.08em;
 }
 
 .section-five__inner {
@@ -105,7 +104,7 @@
 
 .prizes__item {
   position: relative;
-  padding: 40px 10px 24px 24px;
+  padding: 40px 10px 26px 24px;
   width: 226px;
   color: $black;
   background-color: $white;
@@ -130,6 +129,10 @@
     &:not(:last-child) {
       margin-bottom: 60px;
     }
+  }
+
+  @media (min-width: $medium-screen-width) {
+    padding-top: 38px;
   }
 
   @media (max-width: ($large-screen-width - 1px)) {
@@ -185,7 +188,7 @@
     }
 
     &--wide {
-      width: 258px;
+      width: 253px;
     }
   }
 }
@@ -194,10 +197,9 @@
   @include font-settings(1.125rem, 1.45);
   position: relative;
   margin-top: 0;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.6rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: -0.04em;
 
   @media (max-width: ($large-screen-width - 1px)) {
     &::before {
@@ -220,7 +222,6 @@
     font-weight: 800;
     line-height: 1.4;
     color: $black;
-    letter-spacing: -0.04em;
   }
 
   @media (min-width: $medium-screen-width) {
@@ -273,9 +274,9 @@
 
   @media (min-width: $medium-screen-width) {
     margin-left: 194px;
-    padding: 16px 0 20px;
+    padding: 12px 0 20px;
     width: 378px;
-    background-position: 96% 5%;
+    background-position: 96% 4%;
   }
 
   @media (min-width: $large-screen-width) {
@@ -292,7 +293,6 @@
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 800;
-  letter-spacing: -0.05em;
   text-transform: uppercase;
 }
 
@@ -305,7 +305,7 @@
   padding: 20px 0;
 
   @media (min-width: $medium-screen-width) {
-    padding-top: 16px;
+    padding-top: 14px;
     padding-left: 64px;
     padding-right: 34px;
     width: 748px;

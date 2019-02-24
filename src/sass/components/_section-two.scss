@@ -4,7 +4,7 @@
 }
 
 .section-two__wrapper {
-  padding: 26px 47px 38px;
+  padding: 28px 47px 37px;
   
   @media (min-width: $medium-screen-width) {
     padding: 42px 26px 58px;
@@ -23,7 +23,7 @@
   text-align: center;
 
   @media (min-width: $medium-screen-width) {
-    padding: 0 32px;
+    padding: 0 36px;
     margin-bottom: 3.2rem;
   }
 
@@ -38,13 +38,13 @@
   @extend %list;
   position: relative;
   z-index: 1;
-  margin-bottom: 34px;
+  margin-bottom: 36px;
   counter-reset: consults-counter;
 
   @media (min-width: $medium-screen-width) {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 38px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $large-screen-width) {
@@ -53,17 +53,17 @@
 }
 
 .section-two__consult-item {
-  @include size(226px, 230px);
+  @include size(226px, 228px);
   @include font-settings(1rem, 1.375);
   @extend %double-shadow-small;
   position: relative;
-  padding: 36px 28px;
+  padding: 34px 28px;
   background-color: $white;
   counter-increment: consults-counter;
   
   @media (max-width: ($medium-screen-width - 1px)) {
     &:not(:last-child) {
-      margin-bottom: 39px;
+      margin-bottom: 40px;
     }
   }
 
@@ -104,7 +104,7 @@
 .section-two__consult-desc {
   position: relative;
   margin: 0;
-  letter-spacing: 0.03em;
+  letter-spacing: -0.04em;
 
   @media (min-width: $large-screen-width) {
     @include font-settings(1.125rem, 1.944);
@@ -112,7 +112,7 @@
 
   &::before {
     @include pseudo;
-    @include absolute-pos($top: -12px, $left: -42px);
+    @include absolute-pos($top: -10px, $left: -42px);
     @include size(60px, 2px);
     background-color: $turquase;
   }
@@ -128,7 +128,7 @@
   @extend %button;
   @extend %link;
   padding: 23px 0;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.429;
 
   @media (max-width: ($medium-screen-width - 1px)) {
@@ -136,10 +136,7 @@
   }
 
   @media (min-width: $medium-screen-width) {
-    padding-left: $large-padding;
-    padding-right: $large-padding;
-    font-size: 1.125rem;
-    letter-spacing: 0.02em;
+    padding: 21px 27px 25px;
   }
 
   @media (min-width: $large-screen-width) {
