@@ -16,7 +16,7 @@
       padding-right: 4px;
     }
     @media (min-width: $large-screen-width) {
-      width: 1260px;
+      width: 1504px;
       position: relative;
       padding: 0 404px 0 54px;
     }
@@ -61,9 +61,8 @@
       width: 410px;
       @include font-settings(1.125rem, 1.944);
       top: 46%;
-      right: -3%;
+      right: 5%;
     }
-
     &::before {
       @include pseudo;
       @include size(60px, 2px);
