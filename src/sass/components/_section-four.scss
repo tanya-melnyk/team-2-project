@@ -16,7 +16,7 @@
       padding-right: 4px;
     }
     @media (min-width: $large-screen-width) {
-      width: 1260px;
+      width: 1504px;
       position: relative;
       padding: 0 404px 0 54px;
     }
@@ -38,6 +38,7 @@
       width: 673px;
       @include font-settings(1.875rem, 1.167);
       padding: 96px 0 44px 0;
+      margin: 0 0 0 130px;
     }
   }
 
@@ -61,9 +62,8 @@
       width: 410px;
       @include font-settings(1.125rem, 1.944);
       top: 46%;
-      right: -3%;
+      right: 5%;
     }
-
     &::before {
       @include pseudo;
       @include size(60px, 2px);
@@ -97,6 +97,7 @@
       font-size: 3rem;
       padding: 0 0 58px 0;
       letter-spacing: -0.04em;
+      margin: 0 0 0 130px ;
     }
   }
 
